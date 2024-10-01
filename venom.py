@@ -89,7 +89,7 @@ async def genkey(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         else:
             response = "Usage: /genkey <amount> <hours/days>"
     else:
-        response = "ONLY OWNER CAN USE💀OWNER @venomXcrazy..."
+        response = "ONLY OWNER CAN USE💀OWNER @amannxddos..."
 
     await update.message.reply_text(response)
 
@@ -112,7 +112,7 @@ async def redeem(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             save_keys()
             response = f"✅Key redeemed successfully! Access granted until: {users[user_id]} OWNER- @venomXcrazy"
         else:
-            response = "Invalid or expired key buy from @venomXcrazy."
+            response = "Invalid or expired key buy from @amannxddos."
     else:
         response = "Usage: /redeem <key>"
 
@@ -163,7 +163,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user_id = str(update.message.from_user.id)
 
     if user_id not in users or datetime.datetime.now() > datetime.datetime.strptime(users[user_id], '%Y-%m-%d %H:%M:%S'):
-        await update.message.reply_text("❌ Access expired or unauthorized. Please redeem a valid key.buy key from- @venomXcrazy")
+        await update.message.reply_text("❌ Access expired or unauthorized. Please redeem a valid key.buy key from- @amannxddos")
         return
 
     if flooding_process is not None:
@@ -183,11 +183,11 @@ async def stop(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user_id = str(update.message.from_user.id)
 
     if user_id not in users or datetime.datetime.now() > datetime.datetime.strptime(users[user_id], '%Y-%m-%d %H:%M:%S'):
-        await update.message.reply_text("❌ Access expired or unauthorized. Please redeem a valid key.buy key from- @venomXcrazy")
+        await update.message.reply_text("❌ Access expired or unauthorized. Please redeem a valid key.buy key from- @amannxddos")
         return
 
     if flooding_process is None:
-        await update.message.reply_text('No flooding process is running.OWNER @venomXcrazy')
+        await update.message.reply_text('No flooding process is running.OWNER @amannxddos')
         return
 
     flooding_process.terminate()
